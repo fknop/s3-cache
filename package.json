@@ -1,0 +1,53 @@
+{
+  "name": "s3-cache",
+  "description": "CLI to cache and restore files from S3",
+  "version": "0.0.0",
+  "author": "Florian @fknop",
+  "bin": {
+    "s3-cache": "./bin/run"
+  },
+  "bugs": "https://github.com/fknop/s3-cache/issues",
+  "dependencies": {
+    "@oclif/command": "^1",
+    "@oclif/config": "^1",
+    "@oclif/plugin-help": "^2",
+    "crypto-js": "^4.0.0"
+  },
+  "devDependencies": {
+    "@oclif/dev-cli": "^1",
+    "eslint": "^5.13",
+    "eslint-config-oclif": "^3.1",
+    "globby": "^10",
+    "prettier": "^1.19.1"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  },
+  "files": [
+    "/bin",
+    "/npm-shrinkwrap.json",
+    "/oclif.manifest.json",
+    "/src"
+  ],
+  "homepage": "https://github.com/fknop/s3-cache",
+  "keywords": [
+    "oclif"
+  ],
+  "license": "MIT",
+  "main": "src/index.js",
+  "oclif": {
+    "commands": "./src/commands",
+    "bin": "s3-cache",
+    "plugins": [
+      "@oclif/plugin-help"
+    ]
+  },
+  "repository": "fknop/s3-cache",
+  "scripts": {
+    "postpack": "rm -f oclif.manifest.json",
+    "posttest": "eslint .",
+    "prepack": "oclif-dev manifest && oclif-dev readme",
+    "test": "echo NO TESTS",
+    "version": "oclif-dev readme && git add README.md"
+  }
+}
