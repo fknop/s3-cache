@@ -31,26 +31,29 @@ USAGE
 <!-- usagestop -->
 # Commands
 <!-- commands -->
-* [`s3-cache hello`](#s3-cache-hello)
+* [`s3-cache cache`](#s3-cache-cache)
 * [`s3-cache help [COMMAND]`](#s3-cache-help-command)
+* [`s3-cache restore`](#s3-cache-restore)
 
-## `s3-cache hello`
+## `s3-cache cache`
 
-Describe the command here
+Cache file(s) to S3
 
 ```
 USAGE
-  $ s3-cache hello
+  $ s3-cache cache
 
 OPTIONS
-  -n, --name=name  name to print
+  -b, --bucket=s3-bucket-name  (required) Your S3 bucket name
+  -h, --hash-file=path         (required) The path to the file or directory to hash for the cache key
+  -m, --mount=path             (required) The path of the directory or file to be cached to S3
 
-DESCRIPTION
-  ...
-  Extra documentation goes here
+EXAMPLES
+  $ s3-cache cache --bucket bucket-name --hash yarn.lock --mount node_modules
+  $ s3-cache cache -b bucket-name -h yarn.lock -m node_modules
 ```
 
-_See code: [src/commands/hello.js](https://github.com/fknop/s3-cache/blob/v0.0.0/src/commands/hello.js)_
+_See code: [src/commands/cache.js](https://github.com/fknop/s3-cache/blob/v0.0.0/src/commands/cache.js)_
 
 ## `s3-cache help [COMMAND]`
 
@@ -68,4 +71,24 @@ OPTIONS
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v2.2.3/src/commands/help.ts)_
+
+## `s3-cache restore`
+
+Restore file from s3
+
+```
+USAGE
+  $ s3-cache restore
+
+OPTIONS
+  -b, --bucket=s3-bucket-name  (required) Your S3 bucket name
+  -h, --hash-file=path         (required) The path to the file or directory to hash for the cache key
+  -m, --mount=path             (required) The path of the directory for the files restored from s3 to be saved at
+
+EXAMPLES
+  $ s3-cache restore --bucket bucket-name --hash yarn.lock --mount node_modules
+  $ s3-cache restore -b bucket-name -h yarn.lock -m node_modules
+```
+
+_See code: [src/commands/restore.js](https://github.com/fknop/s3-cache/blob/v0.0.0/src/commands/restore.js)_
 <!-- commandsstop -->
