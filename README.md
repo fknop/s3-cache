@@ -4,11 +4,6 @@ s3-cache
 CLI to cache and restore files from S3
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
-[![Version](https://img.shields.io/npm/v/s3-cache.svg)](https://npmjs.org/package/s3-cache)
-[![CircleCI](https://circleci.com/gh/fknop/s3-cache/tree/master.svg?style=shield)](https://circleci.com/gh/fknop/s3-cache/tree/master)
-[![Appveyor CI](https://ci.appveyor.com/api/projects/status/github/fknop/s3-cache?branch=master&svg=true)](https://ci.appveyor.com/project/fknop/s3-cache/branch/master)
-[![Codecov](https://codecov.io/gh/fknop/s3-cache/branch/master/graph/badge.svg)](https://codecov.io/gh/fknop/s3-cache)
-[![Downloads/week](https://img.shields.io/npm/dw/s3-cache.svg)](https://npmjs.org/package/s3-cache)
 [![License](https://img.shields.io/npm/l/s3-cache.svg)](https://github.com/fknop/s3-cache/blob/master/package.json)
 
 <!-- toc -->
